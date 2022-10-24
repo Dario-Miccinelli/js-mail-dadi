@@ -1,0 +1,30 @@
+.logo {
+    width: 10%;
+}
+
+.blue {
+    background-color: blue;
+    color: white;
+
+}
+
+.green {
+    background-color: green;
+    color: white;
+}
+
+.red {
+    background-color: red;
+color: white;
+}
+
+
+.red,
+.green,
+.blue {
+    border: 1px solid;
+    width: 7rem;
+    padding: 0.5rem;
+    margin: auto;
+    border-radius: 15%;
+}

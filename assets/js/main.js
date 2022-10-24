@@ -33,3 +33,42 @@
 
 // DICE GAME
 
+const playYourGameButton = document.getElementById('dice');
+const humanResult = document.getElementById('human');
+const browserResult = document.getElementById('computer');
+let whoWin = document.getElementById('who-win');
+
+
+let dadoHuman;
+let dadoBrowser;
+
+humanResult.innerHTML = "";
+browserResult.innerHTML = "";
+whoWin.innerHTML = "";
+
+playYourGameButton.addEventListener('click', function(){
+  dadoHuman = Math.round(Math.random() * 6);
+  dadoBrowser = Math.round(Math.random() * 6);
+  
+  humanResult.innerHTML = `Human plays ${dadoHuman}`;
+  browserResult.innerHTML = `Browser plays ${dadoBrowser}`;
+  
+  if(dadoHuman < dadoBrowser){
+    whoWin.className = "";
+    whoWin.innerHTML = `You loose...`;
+    whoWin.classList.add('red');
+  
+  }else if(dadoHuman > dadoBrowser){
+    whoWin.className = "";
+    whoWin.innerHTML = `You win!`;
+    whoWin.classList.add('green');
+    
+  }else{
+    whoWin.className = "";
+    whoWin.innerHTML = `Even.`;
+    whoWin.classList.add('blue');
+    
+  }
+});
+
+
